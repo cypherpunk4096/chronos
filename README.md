@@ -49,7 +49,10 @@ commitment below is that clock's discipline, generalized:
 - **time rendered in binary** → bit time as the native unit, not a novelty display;
 - **drift-free ticking** → the interval is measured, never accumulated;
 - **no dependencies, no build** → the clock must be auditable in one sitting;
-- **the chain beside the wall** → blocktime is a first-class clock, not an add-on.
+- **the chain beside the wall** → blocktime is a first-class clock, not an add-on;
+- **one timesignal, every numeral system** → the same tick renders as binary bytes, BCD,
+  decimal, and an **analog dial in Roman or decimal numerals** (the `XII`/`ANA` modes) —
+  chronos is indifferent to its notation, from `00010110` to `XXII`.
 
 The same clock's alarm/countdown side — the timesignal becoming an **event** — is inherited by
 the companion paper: [KAIROS](https://github.com/cypherpunk4096/kairos). One ancestor, two
