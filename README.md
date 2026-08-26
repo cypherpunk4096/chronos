@@ -17,7 +17,7 @@ determinism · zero dependencies · green-checkmark verification · precision ·
 [![Standard: cypherpunk4096](https://img.shields.io/badge/standard-cypherpunk4096-000000?style=for-the-badge)](https://github.com/cypherpunk4096/standard)
 [![Inherits: binaryclock](https://img.shields.io/badge/inherits-binaryclock-2ea44f?style=for-the-badge)](https://github.com/Professor-Codephreak/binaryclock)
 [![Companion: kairos](https://img.shields.io/badge/companion-kairos-627EEA?style=for-the-badge)](https://github.com/cypherpunk4096/kairos)
-[![Precision: 18 decimals](https://img.shields.io/badge/blocktime-18%20decimals-F7931A?style=for-the-badge)](KAIROS-CHRONOS.md)
+[![Precision: 18 decimals](https://img.shields.io/badge/blocktime-18%20decimals-F7931A?style=for-the-badge)](CHRONOS.md)
 
 </div>
 
@@ -27,7 +27,7 @@ determinism · zero dependencies · green-checkmark verification · precision ·
 > Everything stated here is already implemented somewhere named below — this repository is the
 > place where those implementations are read as one idea.
 
-## Lineage — chronos inherits from cypherpunk2048, and from binaryclock
+## Lineage — chronos inherits from cypherpunk2048
 
 Like [the standard](https://github.com/cypherpunk4096/standard) itself, this paper stands on
 **[cypherpunk2048](https://github.com/cypherpunk2048)** (2¹¹) — write code · sovereignty over
