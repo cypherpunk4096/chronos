@@ -76,6 +76,33 @@ computed in the open.
 *To write: the estimator (weighting chains by interval variance), the disagreement bound, and
 the proof format a verifier replays.*
 
+## Ⅴb · The EIP/ERC time mapping — chronos in Ethereum's standards
+
+*Mapping dated **2026-08-25** (the standard timestamps its readings; EIPs are living documents —
+verify status at [eips.ethereum.org](https://eips.ethereum.org) before relying on a row). The
+**event-window** half of this mapping — deadlines, validity ranges, the kairos gates — lives in
+[KAIROS §Ⅲb](https://github.com/cypherpunk4096/kairos/blob/main/KAIROS.md).*
+
+| Standard | What it fixes in time | Chronos reading |
+|----------|----------------------|-----------------|
+| `block.timestamp` (Yellow Paper) | the header's seconds-since-epoch, set by the proposer | the EVM's native chronos — a *claimed* reading, bounded but not measured |
+| [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) (The Merge) | proof-of-stake; block production locks to the **12 s slot lattice** | Ethereum's chronos becomes deterministic — the slot clock ETH.oracle keeps |
+| [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) | `DIFFICULTY` → `PREVRANDAO` | the proof-of-work clock artifact formally retired from the EVM |
+| [ERC-6372](https://eips.ethereum.org/EIPS/eip-6372) | `clock()` + `CLOCK_MODE()` — a contract **declares** whether it keeps time in timestamps or block numbers | **the chronos ERC**: a contract must state which clock it lives on |
+| [ERC-5805](https://eips.ethereum.org/EIPS/eip-5805) | vote checkpointing against a declared 6372 clock | governance history indexed in an explicit chronos |
+| [EIP-4788](https://eips.ethereum.org/EIPS/eip-4788) | beacon block roots readable in the EVM | consensus-layer time made verifiable from execution — a cross-clock check in-protocol |
+| [EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) | historical block hashes served in state | the past addressable: verifiable anchors for old readings |
+
+Bitcoin's counterpart is sparser and older: the header `nTime` (bounded by **median-time-past**,
+BIP113's rule that a block's claimed time exceed the median of its last 11 ancestors) and
+`nLockTime`/`nSequence` ([BIP65](https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki)
+`CHECKLOCKTIMEVERIFY`, [BIP112](https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki)
+`CHECKSEQUENCEVERIFY`) — the chain's own chronos gates, which the ₿TC.oracle reads rather than
+trusts.
+
+*To write: the complete conformance walk — for each row, what a 4096-grade keeper must measure
+versus what the standard lets it assume.*
+
 ## Ⅵ · The Moore's-law measure
 
 *To write: kronos.agent's doubling computation; chronos.oracle as time-as-a-service; progress

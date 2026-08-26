@@ -27,6 +27,16 @@ determinism · zero dependencies · green-checkmark verification · precision ·
 > Everything stated here is already implemented somewhere named below — this repository is the
 > place where those implementations are read as one idea.
 
+## Lineage — chronos inherits from cypherpunk2048, and from binaryclock
+
+Like [the standard](https://github.com/cypherpunk4096/standard) itself, this paper stands on
+**[cypherpunk2048](https://github.com/cypherpunk2048)** (2¹¹) — write code · sovereignty over
+custody · power-of-two discipline · verification over trust. Its clock discipline evolved in
+the open: cypherpunk2048's BTC Standard begat BANKON, and BANKON's **₿TC.oracle is the
+evolution** of that line — the point where "verification over trust" was applied to *time
+itself* (measured blocktime, 18-dp exactness, anti-clockblock quorums). What the 2048 mark
+demanded of money, the oracle demands of the clock; chronos writes that demand down.
+
 ## Lineage — chronos inherits from binaryclock
 
 Chronos stands on **[Professor-Codephreak/binaryclock](https://github.com/Professor-Codephreak/binaryclock)**
@@ -107,7 +117,8 @@ papers.
 **[CHRONOS.md](CHRONOS.md)** — skeleton laid, sections being written:
 Ⅰ the two Greek times · Ⅱ bit time · Ⅲ the drift-free tick (binaryclock inheritance) ·
 Ⅳ blocktime as chronos (₿TC.oracle · ETH.oracle) · Ⅴ clocktime — accuracy proven from many
-chains · Ⅵ the Moore's-law measure · Ⅶ anti-clockblock · Ⅷ the seam with kairos.
+chains · Ⅴb the EIP/ERC time mapping (dated) · Ⅵ the Moore's-law measure · Ⅶ anti-clockblock ·
+Ⅷ the seam with kairos.
 
 ---
 
